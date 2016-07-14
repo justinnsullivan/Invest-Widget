@@ -1,0 +1,57 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+%full{
+  @extend %clearfix;
+  @extend .centered;
+  display: block;
+  margin-left:0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex-col-between{
+  height: 100%;
+  @extend %flexbox;
+  @include flex-dir(column);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+.flex-col-around{
+  height: 100%;
+  @extend %flexbox;
+  @include flex-dir(column);
+  @include align-items(center);
+  @include justify-content(space-around);
+}
+
+.flex-col-center{
+  height: 100%;
+  @extend %flexbox;
+  @include flex-dir(column);
+  @include align-items(center);
+  @include justify-content(center);
+}
+.flex-row-between{
+  @extend %flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-row-around{
+  @extend %flexbox;
+  @include justify-content(space-around);
+  @include align-items(center);
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-row-center{
+  @extend %flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  justify-content: center;
+  align-items: center;
+}

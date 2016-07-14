@@ -1,0 +1,35 @@
+.full {
+    @include bg-colors($ui-colors);
+    @include bg-gradients($ui-gradients);
+}
+
+.grid {
+    @include bg-colors($ui-colors);
+    @include bg-gradients($ui-gradients);
+}
+
+.row {
+    @include bg-colors($ui-colors);
+    @include bg-gradients($ui-gradients);
+    @include m(full) {
+        @include bg-colors($ui-colors);
+        @include bg-gradients($ui-gradients);
+    }
+}
+
+[class^="row--"] {
+    @extend %center-align;
+    @extend .row;
+}
+
+[class^="full--"] {
+    @extend %full
+}
+
+[class^="row--full"] {
+    @extend %center-align;
+    @extend .row;
+    @extend %clearfix;
+    @extend .centered;
+    height: 100vh;
+}
